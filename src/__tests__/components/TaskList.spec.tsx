@@ -38,7 +38,7 @@ describe('App Page', () => {
     expect(addedSecondTaskTitle.parentElement).not.toHaveClass('completed')
   })
 
-  it('should not be able to add a task with a empty title', () => {
+  it('should not be able to add a task with an empty title', () => {
     render(<TaskList />);
 
     const addTaskButton = screen.getByTestId('add-task-button');
@@ -54,7 +54,7 @@ describe('App Page', () => {
         value: 'Desafio ReactJS Ignite'
       }
     });
-    
+
     fireEvent.click(addTaskButton);
 
     const addedFirstTaskTitle = screen.getByText('Desafio ReactJS Ignite');
